@@ -26,28 +26,6 @@ I also self-host more things than I probably should.
 
 ---
 
-## 🏷️ Featured Projects
-
-### 📡 [open-monitoring](https://github.com/jerbao/open-monitoring)
-
-Public status page for my infrastructure. It reads Prometheus and shows the health of Proxmox, the k3s cluster, the network, and my sites.
-
-- FastAPI async backend: `httpx` + `asyncio.gather` with a 10s cache, stale-while-revalidate, and single-flight
-- Prometheus and blackbox-exporter run on a separate VM, so monitoring keeps working if the public site is under attack
-- Cloudflare → HAProxy (SNI) → k3s, with TLS from cert-manager (DNS-01)
-- GitOps deploy with ArgoCD, plus an HPA that scales up fast and down slowly
-- GitHub Actions: Ruff and basedpyright checks, then image build and push to GHCR
-
-### ☀️ [BomClaude](https://github.com/jerbao/BomClaude)
-
-Runs Claude Code CLI in Docker, one container per team member, to start each person's 5-hour usage window on a schedule.
-
-- The scheduler lives inside the container (Python loop under tini), with no host cron or systemd
-- Web panel to create sessions, log in via OAuth, trigger runs, and check usage, with per-session locks and an audit log
-- Credentials stay in each container's volume; the panel never reads them
-
----
-
 ## 🧰 Stack
 
 **Languages**
