@@ -1,12 +1,20 @@
-### Hi, I'm Jerônimo 👋
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header" width="100%" />
+</p>
 
-I'm an infrastructure and DevOps engineer from Brazil.
+# Hi, I'm Jerônimo 👋
+
+I'm an infrastructure and DevOps engineer.
 
 Most of my work is around Proxmox, Kubernetes, infrastructure as code, and taking AI services from a developer's machine to a production cluster. On the backend side, I write async Python services with FastAPI, message queues, and PostgreSQL.
 
 I also self-host more things than I probably should.
 
-#### What I work on
+📍 Natal, RN — Brazil
+
+---
+
+## 🚀 What I work on
 
 - **On-prem Kubernetes (k3s)**: NVIDIA GPUs shared via time-slicing, MetalLB, NGINX/HAProxy ingress, Longhorn/NFS storage, Harbor, remote BuildKit builds, a Pulp package cache, and a lot of other services (GitLab Runners, Sentry, Langfuse, MLflow, Keycloak, RabbitMQ…) managed with Helm and ArgoCD.
 - **Infrastructure as code**: GCP/GKE (network, bastion, cluster) with Terraform and Ansible; Proxmox VMs with OpenTofu; Ansible playbooks for OS patching and etcd backups.
@@ -16,7 +24,31 @@ I also self-host more things than I probably should.
 - **Observability**: kube-prometheus-stack, Loki/Alloy, DCGM, and cAdvisor, with my own dashboards and alerts for GPUs, volumes, nodes, and queues.
 - **CI/CD**: pipelines on GitLab CI, GitHub Actions, and Jenkins that lint, type-check, test, scan, build, and push images, then bump the manifests that ArgoCD syncs.
 
-#### Stack
+---
+
+## 🏷️ Featured Projects
+
+### 📡 [open-monitoring](https://github.com/jerbao/open-monitoring)
+
+Public status page for my infrastructure. It reads Prometheus and shows the health of Proxmox, the k3s cluster, the network, and my sites.
+
+- FastAPI async backend: `httpx` + `asyncio.gather` with a 10s cache, stale-while-revalidate, and single-flight
+- Prometheus and blackbox-exporter run on a separate VM, so monitoring keeps working if the public site is under attack
+- Cloudflare → HAProxy (SNI) → k3s, with TLS from cert-manager (DNS-01)
+- GitOps deploy with ArgoCD, plus an HPA that scales up fast and down slowly
+- GitHub Actions: Ruff and basedpyright checks, then image build and push to GHCR
+
+### ☀️ [BomClaude](https://github.com/jerbao/BomClaude)
+
+Runs Claude Code CLI in Docker, one container per team member, to start each person's 5-hour usage window on a schedule.
+
+- The scheduler lives inside the container (Python loop under tini), with no host cron or systemd
+- Web panel to create sessions, log in via OAuth, trigger runs, and check usage, with per-session locks and an audit log
+- Credentials stay in each container's volume; the panel never reads them
+
+---
+
+## 🧰 Stack
 
 **Languages**
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
@@ -126,3 +158,31 @@ I also self-host more things than I probably should.
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?logo=espressif&logoColor=white)
 
 </details>
+
+---
+
+## 🌎 Languages
+
+- 🇧🇷 **Portuguese**: native
+- 🇺🇸 **English**: advanced
+
+---
+
+## 📊 GitHub Stats
+
+<a href="https://github.com/jerbao">
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=jerbao&theme=noctis_minimus&show_icons=true&hide_rank=true" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jerbao&theme=noctis_minimus&layout=compact" />
+</a>
+
+---
+
+## 🌐 Contact
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jer%C3%B4nimo-rafael-386919418)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/jerb_rafael)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/jerbao)
+
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%" />
+</p>
