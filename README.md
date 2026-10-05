@@ -146,15 +146,6 @@ I also self-host more things than I probably should.
 
 ---
 
-## 📊 GitHub Stats
-
-<a href="https://github.com/jerbao">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=jerbao&theme=noctis_minimus&show_icons=true&hide_rank=true" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jerbao&theme=noctis_minimus&layout=compact" />
-</a>
-
----
-
 ## 🌐 Contact
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jer%C3%B4nimo-rafael-386919418)
